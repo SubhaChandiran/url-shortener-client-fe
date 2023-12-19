@@ -7,7 +7,7 @@ function App() {
 
   const shortenUrl = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/shorten', {
+      const response = await axios.post('https://ulr-shortener-client-be.onrender.com/api/shorten', {
         originalUrl,
       });
 
@@ -30,8 +30,8 @@ function App() {
       {shortUrl && (
         <div>
           <p>Shortened URL:</p>
-          <a href={`http://localhost:5000/${shortUrl}`} target="_blank" rel="noopener noreferrer">
-            {`http://localhost:5000/${shortUrl}`}
+          <a href={`https://ulr-shortener-client-be.onrender.com/${shortUrl}`} target="_blank" rel="noopener noreferrer">
+            {`https://ulr-shortener-client-be.onrender.com/${shortUrl}`}
           </a>
         </div>
       )}
